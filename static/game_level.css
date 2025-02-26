@@ -1,0 +1,176 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-y: auto; /* Allow vertical scrolling */
+    position: relative;
+    flex-direction: column; /* Allow for vertical stacking */
+}
+
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.container {
+    position: relative; /* Make the container position relative */
+    z-index: 1; /* Ensure it is above the video */
+    color: rgb(228, 228, 228); /* Your text color */
+    text-align: center;
+    padding: 10px; /* Reduced padding */
+    max-width: 90%; /* Ensure it fits on smaller screens */
+    margin: 0 auto; /* Center the container */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 10px 0; /* Reduced margin */
+}
+
+.scoreboard {
+    background-color: rgb(255, 254, 254);
+    padding: 10px; /* Reduced padding */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 10px; /* Reduced gap */
+    justify-items: center; /* Center items within each grid cell */
+}
+
+.level {
+    background-color: rgba(0, 255, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 200px; /* Fixed width for level boxes */
+    height: 150px; /* Fixed height for level boxes */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    padding: 10px; /* Padding inside the box */
+    text-align: center; /* Center text inside */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.level:hover {
+    transform: scale(1.05);
+    background-color: rgb(0, 47, 255);
+}
+
+h2 {
+    font-size: 1.5em; /* Adjust title size for levels */
+    margin: 5px 0; /* Added margin for spacing */
+}
+
+button {
+    background-color: rgb(25, 0, 255);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px; /* Adjusted padding */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: rgb(21, 228, 255);
+}
+
+.status {
+    display: block;
+    margin-top: 5px; /* Reduced margin */
+    font-size: 1.1em; /* Slightly smaller */
+    color: gold;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.2em; /* Slightly smaller on medium devices */
+    }
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2em; /* Smaller for tablets */
+    }
+    h2 {
+        font-size: 1.3em; /* Smaller for level titles */
+    }
+    button {
+        padding: 6px 10px; /* Smaller button size */
+        font-size: 0.9em; /* Smaller font for buttons */
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em; /* Smaller for mobile */
+    }
+    h2 {
+        font-size: 1.2em; /* Adjust level title size */
+    }
+    button {
+        padding: 5px 8px; /* Even smaller button size */
+        font-size: 0.8em; /* Smaller font for buttons */
+    }
+}
+
+#greeting {
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.form-control,
+.btn {
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: rgb(0, 26, 255);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#gradientCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    z-index: 0; /* Behind other content */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+
+    .container {
+        padding: 20px; /* Reduce padding on small screens */
+    }
+}

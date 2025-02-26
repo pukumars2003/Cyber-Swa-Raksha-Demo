@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Cyber Swa Raksha</title>
+    <link rel="stylesheet" href="static/new_index.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <canvas id="gradientCanvas"></canvas>
+    <h1>Welcome to Cyber Swa Raksha Game</h1>
+    <h2 id="greeting"></h2>
+    
+    <div class="container">
+        
+        <form id="start-form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="player-name" placeholder="Enter your name" required>
+            </div>
+        
+            <div class="form-group">
+                <select class="form-control" id="language">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="ta">தமிழ்</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" id="start-button">Start</button>
+        </form>
+    </div>
+
+    <script src="static/index.js"></script>
+</body>
+
+</html>

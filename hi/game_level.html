@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Cyber Sva Raksha</title>
+    <link rel="stylesheet" href="/static/game_level.css">
+    <style>
+       
+    </style>
+</head>
+
+<body>
+
+    <canvas id="gradientCanvas"></canvas>
+    <div class="container">
+        <h1><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+        <p>Match your way through the cybersecurity challenges!</p>
+
+        <div class="scoreboard">
+            <h2>Score: <span id="score">0</span></h2>
+        </div>
+
+        <div class="level-grid">
+            <div class="level" id="level1" onclick="completeLevel(1)">
+                <h2>1</h2>
+                <p>Phishing Tutorial</p>
+                <button id="button1" onclick="playLevel(1)">Play</button>
+                <span class="status"></span>
+            </div>
+            <div class="level" id="level2" onclick="completeLevel(2)">
+                <h2>2</h2>
+                <p>Spot the Phish</p>
+                <button id="button2" onclick="playLevel(2)">Play</button>
+                <span class="status"></span>
+            </div>
+            <div class="level" id="level3" onclick="completeLevel(3)">
+                <h2>3</h2>
+                <p>Ransomware Tutorial</p>
+                <button id="button3" onclick="playLevel(3)">Play</button>
+                <span class="status"></span>
+            </div>
+            <div class="level" id="level4" onclick="completeLevel(4)">
+                <h2>4</h2>
+                <p>Decrypt the Threat</p>
+                <button id="button4" onclick="playLevel(4)">Play</button>
+                <span class="status"></span>
+            </div>
+            <div class="level" id="level5" onclick="completeLevel(5)">
+                <h2>5</h2>
+                <p>Spot the Fake Call</p>
+                <button id="button5" onclick="playLevel(5)">Play</button>
+                <span class="status"></span>
+            </div>
+        </div>
+    </div>
+    <!-- Audio for greeting -->
+    <audio id="greeting-audio" src="greeting.mp3" preload="auto"></audio>
+    <audio id="level-audio1" src="Intro hindi.mp3" preload="auto"></audio>
+    <audio id="level-audio2" src="level2-intro.mp3" preload="auto"></audio>
+    <audio id="level-audio3" src="Intro Kannda.mp3" preload="auto"></audio>
+    <audio id="level-audio4" src="level4-intro.mp3" preload="auto"></audio>
+    <audio id="level-audio5" src="level5-intro.mp3" preload="auto"></audio>
+
+    <script src="/static/script.js"></script>
+
+    <script src="/static/Game_level.js"></script>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>
