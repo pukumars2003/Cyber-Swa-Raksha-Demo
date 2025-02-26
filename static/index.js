@@ -36,7 +36,7 @@ function greetPlayer(name, language) {
     speak(greetText, language);
 
     setTimeout(function () {
-        window.location.href = `/${language}/game_level.html`;
+        window.location.href = `${language}/game_level.html`;
     }, 5000);
 }
 
